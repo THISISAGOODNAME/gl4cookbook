@@ -66,11 +66,11 @@ void SceneBasic_Uniform::initScene()
     glVertexAttribPointer( 1, 3, GL_FLOAT, GL_FALSE, 0, (GLubyte *)NULL );
 #else
     glBindVertexBuffer(0, positionBufferHandle, 0, sizeof(GLfloat)*3);
-    		glBindVertexBuffer(1, colorBufferHandle, 0, sizeof(GLfloat)*3);
+    glBindVertexBuffer(1, colorBufferHandle, 0, sizeof(GLfloat)*3);
 
-    		glVertexAttribFormat(0, 3, GL_FLOAT, GL_FALSE, 0);
-    		glVertexAttribBinding(0, 0);
-    		glVertexAttribFormat(1, 3, GL_FLOAT, GL_FALSE, 0);
+    glVertexAttribFormat(0, 3, GL_FLOAT, GL_FALSE, 0);
+    glVertexAttribBinding(0, 0);
+    glVertexAttribFormat(1, 3, GL_FLOAT, GL_FALSE, 0);
     glVertexAttribBinding(1, 1);
 #endif
     glBindVertexArray(0);
