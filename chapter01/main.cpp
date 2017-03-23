@@ -9,6 +9,8 @@
 // STL
 #include <iostream>
 #include <string>
+#include <cstdlib>
+#include <cstdio>
 
 //
 #include "scene.h"

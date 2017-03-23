@@ -4,6 +4,7 @@
 
 // STL
 #include <iostream>
+#include <cstdlib>
 
 int mWidth = 800;
 int mHeight = 600;
