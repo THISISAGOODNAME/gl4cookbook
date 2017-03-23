@@ -11,7 +11,8 @@ add_subdirectory(3rd_party/glfw)
 include_directories(
         3rd_party/glad/include/
         3rd_party/glfw/include/
-        3rd_party/glm/)
+        3rd_party/glm/
+        common/)
 
 if(MSVC)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4")
@@ -22,6 +23,16 @@ else()
     endif()
 endif()
 
+# glad.c
+set(GLAD_FILES ../3rd_party/glad/src/glad.c)
+
+# common src
+file(GLOB COMMON_SOURCES
+        common/*.c
+        common/*.cpp)
+
+# LIBs
 set(COMMON_LIBS glfw ${GLFW_LIBRARIES} ${GLAD_LIBRARIES})
 
 add_subdirectory(boilerplate)
+add_subdirectory(chapter01)
