@@ -36,3 +36,4 @@ set(COMMON_LIBS glfw ${GLFW_LIBRARIES} ${GLAD_LIBRARIES})
 
 add_subdirectory(boilerplate)
 add_subdirectory(chapter01)
+add_subdirectory(chapter02)
