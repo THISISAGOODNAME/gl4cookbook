@@ -21,6 +21,7 @@
 #include "SceneTwoSide.h"
 #include "SceneFlat.h"
 #include "SceneSubroutine.h"
+#include "SceneDiscard.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -129,7 +130,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "diffuse") {
         scene = new SceneDiffuse();
     } else if( recipe == "discard") {
-//        scene = new SceneDiscard();
+        scene = new SceneDiscard();
     } else if( recipe == "flat" ) {
         scene = new SceneFlat();
     } else if( recipe == "subroutine") {

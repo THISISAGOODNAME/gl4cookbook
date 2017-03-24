@@ -4,7 +4,8 @@ set(SCENES
         SceneDiffuse.cpp SceneDiffuse.h
         SceneTwoSide.cpp SceneTwoSide.h
         SceneFlat.cpp SceneFlat.h
-        SceneSubroutine.cpp SceneSubroutine.h)
+        SceneSubroutine.cpp SceneSubroutine.h
+        SceneDiscard.cpp SceneDiscard.h)
 
 add_executable(chapter02 ${chapter02_SOURCES} ${SCENES})
 target_link_libraries(chapter02 ${COMMON_LIBS})
