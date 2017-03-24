@@ -80,7 +80,8 @@ void SceneADS::resize(int w, int h)
 void SceneADS::compileAndLinkShader()
 {
     try {
-        prog.compileShader("shader/phong.vert");
+//        prog.compileShader("shader/phong.vert");
+        prog.compileShader("shader/phong-function.vert");
         prog.compileShader("shader/phong.frag");
         prog.link();
         prog.use();
