@@ -7,7 +7,7 @@
 
 #include "scene.h"
 #include "glslprogram.h"
-#include "vbotorus.h"
+#include "Meshes/vbotorus.h"
 
 #include <glad/glad.h>
 

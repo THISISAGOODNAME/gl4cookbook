@@ -29,7 +29,8 @@ set(GLAD_FILES ../3rd_party/glad/src/glad.c)
 # common src
 file(GLOB COMMON_SOURCES
         common/*.c
-        common/*.cpp)
+        common/*.cpp
+        common/Meshes/*.cpp)
 
 # LIBs
 set(COMMON_LIBS glfw ${GLFW_LIBRARIES} ${GLAD_LIBRARIES})

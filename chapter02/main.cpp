@@ -16,8 +16,9 @@
 //
 #include "scene.h"
 #include "glutils.h"
-#include "SceneADS.h"
 #include "SceneDiffuse.h"
+#include "SceneADS.h"
+#include "SceneTwoSide.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -132,7 +133,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "subroutine") {
 //        scene = new SceneSubroutine();
     } else if( recipe == "two-side" ) {
-//        scene = new SceneTwoSide();
+        scene = new SceneTwoSide();
     } else {
         printf("Unknown recipe: %s\n", recipe.c_str());
         exit(EXIT_FAILURE);
