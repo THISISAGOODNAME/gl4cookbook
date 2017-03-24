@@ -16,6 +16,7 @@
 //
 #include "scene.h"
 #include "glutils.h"
+#include "SceneMultiLight.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -70,14 +71,14 @@ int main(int argc, char * argv[]) {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
 #else
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 5);
 #endif
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
     // Open the window
-    std::string title = "Chapter 02 -- " + recipe;
+    std::string title = "Chapter 03 -- " + recipe;
     window = glfwCreateWindow(WIN_WIDTH, WIN_HEIGHT, title.c_str(), nullptr, nullptr);
     if (window == nullptr) {
         std::cout << "Failed to create GLFW window" << std::endl;
@@ -124,7 +125,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "fog") {
 //        scene = new SceneFog();
     } else if( recipe == "multi-light") {
-//        scene = new SceneMultiLight();
+        scene = new SceneMultiLight();
     } else if( recipe == "per-frag" ) {
 //        scene = new ScenePerFragment();
     } else if( recipe == "spot") {
