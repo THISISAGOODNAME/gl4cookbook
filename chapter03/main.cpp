@@ -18,6 +18,7 @@
 #include "glutils.h"
 #include "SceneMultiLight.h"
 #include "SceneDirectional.h"
+#include "ScenePerFragment.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -128,7 +129,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "multi-light") {
         scene = new SceneMultiLight();
     } else if( recipe == "per-frag" ) {
-//        scene = new ScenePerFragment();
+        scene = new ScenePerFragment();
     } else if( recipe == "spot") {
 //        scene = new SceneSpot();
     } else if( recipe == "toon" ) {
