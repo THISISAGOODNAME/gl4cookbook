@@ -20,6 +20,7 @@
 #include "SceneADS.h"
 #include "SceneTwoSide.h"
 #include "SceneFlat.h"
+#include "SceneSubroutine.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -132,7 +133,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "flat" ) {
         scene = new SceneFlat();
     } else if( recipe == "subroutine") {
-//        scene = new SceneSubroutine();
+        scene = new SceneSubroutine();
     } else if( recipe == "two-side" ) {
         scene = new SceneTwoSide();
     } else {
