@@ -17,6 +17,7 @@
 #include "scene.h"
 #include "glutils.h"
 #include "SceneADS.h"
+#include "SceneDiffuse.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -101,7 +102,7 @@ int main(int argc, char * argv[]) {
 
     // Initialization
     initializeGL();
-    resizeGL(WIN_WIDTH, WIN_HEIGHT);
+    resizeGL(width, height);
 
     // Enter the main loop
     mainLoop();
@@ -123,7 +124,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     if( recipe == "ads" ) {
         scene = new SceneADS();
     } else if( recipe == "diffuse") {
-//        scene = new SceneDiffuse();
+        scene = new SceneDiffuse();
     } else if( recipe == "discard") {
 //        scene = new SceneDiscard();
     } else if( recipe == "flat" ) {
