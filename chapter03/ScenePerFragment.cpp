@@ -101,6 +101,7 @@ void ScenePerFragment::compileAndLinkShader()
     try {
         prog.compileShader("shader/perfrag.vert",GLSLShader::VERTEX);
         prog.compileShader("shader/perfrag.frag",GLSLShader::FRAGMENT);
+//        prog.compileShader("shader/perfrag-halfwayVec.frag",GLSLShader::FRAGMENT);
         prog.link();
         prog.use();
     } catch(GLSLProgramException & e) {
