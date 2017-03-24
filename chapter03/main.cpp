@@ -17,6 +17,7 @@
 #include "scene.h"
 #include "glutils.h"
 #include "SceneMultiLight.h"
+#include "SceneDirectional.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -121,7 +122,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     std::string recipe = argv[1];
 
     if( recipe == "directional" ) {
-//        scene = new SceneDirectional();
+        scene = new SceneDirectional();
     } else if( recipe == "fog") {
 //        scene = new SceneFog();
     } else if( recipe == "multi-light") {
