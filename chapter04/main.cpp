@@ -18,6 +18,7 @@
 #include "glutils.h"
 #include "SceneTexture.h"
 #include "SceneMultiTex.h"
+#include "SceneAlphaTest.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -122,7 +123,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     std::string recipe = argv[1];
 
     if( recipe == "alpha-test" ) {
-//        scene = new SceneAlphaTest();
+        scene = new SceneAlphaTest();
     } else if( recipe == "multi-tex") {
         scene = new SceneMultiTex();
     } else if( recipe == "normal-map") {
