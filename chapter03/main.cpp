@@ -20,6 +20,7 @@
 #include "SceneDirectional.h"
 #include "ScenePerFragment.h"
 #include "SceneSpot.h"
+#include "SceneToon.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -134,7 +135,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "spot") {
         scene = new SceneSpot();
     } else if( recipe == "toon" ) {
-//        scene = new SceneToon();
+        scene = new SceneToon();
     } else {
         printf("Unknown recipe: %s\n", recipe.c_str());
         exit(EXIT_FAILURE);
