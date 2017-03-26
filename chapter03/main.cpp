@@ -21,6 +21,7 @@
 #include "ScenePerFragment.h"
 #include "SceneSpot.h"
 #include "SceneToon.h"
+#include "SceneFog.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -127,7 +128,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     if( recipe == "directional" ) {
         scene = new SceneDirectional();
     } else if( recipe == "fog") {
-//        scene = new SceneFog();
+        scene = new SceneFog();
     } else if( recipe == "multi-light") {
         scene = new SceneMultiLight();
     } else if( recipe == "per-frag" ) {

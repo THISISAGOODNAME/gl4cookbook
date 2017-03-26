@@ -20,7 +20,7 @@ layout( location = 0 ) out vec4 FragColor;
 vec3 toonShade( )
 {
     vec3 n = normalize(Normal);
-    vec3 s = normalize( Light.position.xyz - Position.xyz );
+    vec3 s = normalize(vec3( Light.position ) - Position);
     vec3 ambient = Ka;
     float cosine = dot( s, n );
     vec3 diffuse = Kd * floor( cosine * levels ) * scaleFactor;
