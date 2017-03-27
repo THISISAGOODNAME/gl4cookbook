@@ -22,6 +22,7 @@
 #include "SceneNormalMap.h"
 #include "SceneReflectCube.h"
 #include "SceneRefractCube.h"
+#include "SceneProjTex.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -132,7 +133,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "normal-map") {
         scene = new SceneNormalMap();
     } else if( recipe == "proj-tex" ) {
-//        scene = new SceneProjTex();
+        scene = new SceneProjTex();
     } else if( recipe == "reflect-cube") {
         scene = new SceneReflectCube();
     } else if( recipe == "refract-cube" ) {
