@@ -21,6 +21,7 @@
 #include "SceneAlphaTest.h"
 #include "SceneNormalMap.h"
 #include "SceneReflectCube.h"
+#include "SceneRefractCube.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -135,7 +136,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "reflect-cube") {
         scene = new SceneReflectCube();
     } else if( recipe == "refract-cube" ) {
-//        scene = new SceneRefractCube();
+        scene = new SceneRefractCube();
     } else if( recipe == "render-to-tex" ) {
 //        scene = new SceneRenderToTex();
     } else if( recipe == "sampler-obj" ) {
