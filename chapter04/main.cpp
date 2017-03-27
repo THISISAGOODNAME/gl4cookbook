@@ -23,6 +23,7 @@
 #include "SceneReflectCube.h"
 #include "SceneRefractCube.h"
 #include "SceneProjTex.h"
+#include "SceneRenderToTex.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -139,7 +140,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "refract-cube" ) {
         scene = new SceneRefractCube();
     } else if( recipe == "render-to-tex" ) {
-//        scene = new SceneRenderToTex();
+        scene = new SceneRenderToTex();
     } else if( recipe == "sampler-obj" ) {
 //        scene = new SceneSamplerObj();
     } else if( recipe == "texture" ) {

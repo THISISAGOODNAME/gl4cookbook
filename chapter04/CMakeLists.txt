@@ -7,7 +7,8 @@ set(SCENES
         SkyBox.cpp SkyBox.h
         SceneReflectCube.cpp SceneReflectCube.h
         SceneRefractCube.cpp SceneRefractCube.h
-        SceneProjTex.cpp SceneProjTex.h)
+        SceneProjTex.cpp SceneProjTex.h
+        SceneRenderToTex.cpp SceneRenderToTex.h)
 
 add_executable(chapter04 ${chapter04_SOURCES} ${SCENES})
 target_link_libraries(chapter04 ${COMMON_LIBS})
