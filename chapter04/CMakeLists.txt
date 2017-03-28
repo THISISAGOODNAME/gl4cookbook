@@ -8,7 +8,8 @@ set(SCENES
         SceneReflectCube.cpp SceneReflectCube.h
         SceneRefractCube.cpp SceneRefractCube.h
         SceneProjTex.cpp SceneProjTex.h
-        SceneRenderToTex.cpp SceneRenderToTex.h)
+        SceneRenderToTex.cpp SceneRenderToTex.h
+        SceneSamplerObj.cpp SceneSamplerObj.h)
 
 add_executable(chapter04 ${chapter04_SOURCES} ${SCENES})
 target_link_libraries(chapter04 ${COMMON_LIBS})
