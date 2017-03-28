@@ -24,6 +24,7 @@ using std::stringstream;
 #include "SceneHdrBloom.h"
 #include "SceneGamma.h"
 #include "SceneMsaa.h"
+#include "SceneDeferred.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -154,7 +155,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     if( recipe == "blur") {
         scene = new SceneBlur();
     } else if( recipe == "deferred") {
-//        scene = new SceneDeferred();
+        scene = new SceneDeferred();
     } else if( recipe == "edge" ) {
         scene = new SceneEdge();
     } else if( recipe == "gamma") {
