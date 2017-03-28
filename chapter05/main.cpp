@@ -16,6 +16,7 @@
 //
 #include "scene.h"
 #include "glutils.h"
+#include "SceneEdge.h"
 
 
 #define WIN_WIDTH 800
@@ -100,8 +101,8 @@ int main(int argc, char * argv[]) {
     GLUtils::dumpGLInfo();
 
     // Initialization
-    initializeGL();
     resizeGL(width, height);
+    initializeGL();
 
     // Enter the main loop
     mainLoop();
@@ -125,7 +126,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "deferred") {
 //        scene = new SceneDeferred();
     } else if( recipe == "edge" ) {
-//        scene = new SceneEdge();
+        scene = new SceneEdge();
     } else if( recipe == "gamma") {
 //        scene = new SceneGamma();
     } else if( recipe == "msaa" ) {
