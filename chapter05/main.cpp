@@ -20,6 +20,7 @@
 #include "SceneBlur.h"
 #include "SceneToneMap.h"
 #include "SceneHdrBloom.h"
+#include "SceneGamma.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -130,7 +131,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "edge" ) {
         scene = new SceneEdge();
     } else if( recipe == "gamma") {
-//        scene = new SceneGamma();
+        scene = new SceneGamma();
     } else if( recipe == "msaa" ) {
 //        scene = new SceneMsaa();
     } else if( recipe == "tone-map" ) {
