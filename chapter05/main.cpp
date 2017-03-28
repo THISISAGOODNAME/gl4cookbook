@@ -19,6 +19,7 @@
 #include "SceneEdge.h"
 #include "SceneBlur.h"
 #include "SceneToneMap.h"
+#include "SceneHdrBloom.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -135,7 +136,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "tone-map" ) {
         scene = new SceneToneMap();
     } else if( recipe == "hdr-bloom" ) {
-//        scene = new SceneHdrBloom();
+        scene = new SceneHdrBloom();
     } else if( recipe == "oit" ) {
 //        scene = new SceneOit();
     } else {
