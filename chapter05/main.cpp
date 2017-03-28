@@ -18,6 +18,7 @@
 #include "glutils.h"
 #include "SceneEdge.h"
 #include "SceneBlur.h"
+#include "SceneToneMap.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -132,7 +133,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "msaa" ) {
 //        scene = new SceneMsaa();
     } else if( recipe == "tone-map" ) {
-//        scene = new SceneToneMap();
+        scene = new SceneToneMap();
     } else if( recipe == "hdr-bloom" ) {
 //        scene = new SceneHdrBloom();
     } else if( recipe == "oit" ) {
