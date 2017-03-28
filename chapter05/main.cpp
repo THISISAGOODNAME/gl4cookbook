@@ -25,6 +25,7 @@ using std::stringstream;
 #include "SceneGamma.h"
 #include "SceneMsaa.h"
 #include "SceneDeferred.h"
+#include "SceneOit.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -106,8 +107,8 @@ int main(int argc, char * argv[]) {
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
-    glfwWindowHint(GLFW_SAMPLES, 8);
-    glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GL_TRUE);
+//    glfwWindowHint(GLFW_SAMPLES, 8);
+//    glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GL_TRUE);
 
     // Open the window
     title = "Chapter 05 -- " + recipe;
@@ -167,7 +168,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "hdr-bloom" ) {
         scene = new SceneHdrBloom();
     } else if( recipe == "oit" ) {
-//        scene = new SceneOit();
+        scene = new SceneOit();
     } else {
         printf("Unknown recipe: %s\n", recipe.c_str());
         exit(EXIT_FAILURE);

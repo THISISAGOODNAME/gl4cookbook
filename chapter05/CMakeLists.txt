@@ -6,7 +6,7 @@ set(SCENES
         SceneHdrBloom.cpp SceneHdrBloom.h
         SceneGamma.cpp SceneGamma.h
         SceneMsaa.cpp SceneMsaa.h
-        SceneDeferred.cpp SceneDeferred.h)
+        SceneDeferred.cpp SceneDeferred.h SceneOit.cpp SceneOit.h)
 
 add_executable(chapter05 ${chapter05_SOURCES} ${SCENES})
 target_link_libraries(chapter05 ${COMMON_LIBS})
