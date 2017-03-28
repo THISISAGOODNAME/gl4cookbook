@@ -17,7 +17,7 @@
 #include "scene.h"
 #include "glutils.h"
 #include "SceneEdge.h"
-
+#include "SceneBlur.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -122,7 +122,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     std::string recipe = argv[1];
 
     if( recipe == "blur") {
-//        scene = new SceneBlur();
+        scene = new SceneBlur();
     } else if( recipe == "deferred") {
 //        scene = new SceneDeferred();
     } else if( recipe == "edge" ) {
