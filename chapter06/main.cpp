@@ -102,7 +102,7 @@ int main(int argc, char * argv[]) {
 //    glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GL_TRUE);
 
     // Open the window
-    title = "Chapter 05 -- " + recipe;
+    title = "Chapter 06 -- " + recipe;
     window = glfwCreateWindow(WIN_WIDTH, WIN_HEIGHT, title.c_str(), nullptr, nullptr);
     if (window == nullptr) {
         std::cout << "Failed to create GLFW window" << std::endl;
