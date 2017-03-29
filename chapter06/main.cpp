@@ -21,6 +21,7 @@ using std::stringstream;
 #include "SceneShadeWire.h"
 #include "SceneSilhouette.h"
 #include "SceneBezCurve.h"
+#include "SceneQuadTess.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -153,7 +154,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "point-sprite") {
         scene = new ScenePointSprite();
     } else if( recipe == "quad-tess") {
-//        scene = new SceneQuadTess();
+        scene = new SceneQuadTess();
     } else if( recipe == "shade-wire" ) {
         scene = new SceneShadeWire();
     } else if( recipe == "silhouette") {

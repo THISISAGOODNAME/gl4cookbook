@@ -3,7 +3,8 @@ set(SCENES
         ScenePointSprit.cpp ScenePointSprit.h
         SceneShadeWire.cpp SceneShadeWire.h
         SceneSilhouette.cpp SceneSilhouette.h
-        SceneBezCurve.cpp SceneBezCurve.h)
+        SceneBezCurve.cpp SceneBezCurve.h
+        SceneQuadTess.cpp SceneQuadTess.h)
 
 add_executable(chapter06 ${chapter06_SOURCES} ${SCENES})
 target_link_libraries(chapter06 ${COMMON_LIBS})
