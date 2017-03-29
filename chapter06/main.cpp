@@ -23,6 +23,7 @@ using std::stringstream;
 #include "SceneBezCurve.h"
 #include "SceneQuadTess.h"
 #include "SceneTessTeapot.h"
+#include "SceneTessTeapotDepth.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -163,7 +164,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "tess-teapot" ) {
         scene = new SceneTessTeapot();
     } else if( recipe == "tess-teapot-depth" ) {
-//        scene = new SceneTessTeapotDepth();
+        scene = new SceneTessTeapotDepth();
     } else {
         printf("Unknown recipe: %s\n", recipe.c_str());
         printHelpInfo(argv[0]);
