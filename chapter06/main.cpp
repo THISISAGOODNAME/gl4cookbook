@@ -18,6 +18,7 @@ using std::stringstream;
 #include "scene.h"
 #include "glutils.h"
 #include "ScenePointSprit.h"
+#include "SceneShadeWire.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -152,7 +153,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "quad-tess") {
 //        scene = new SceneQuadTess();
     } else if( recipe == "shade-wire" ) {
-//        scene = new SceneShadeWire();
+        scene = new SceneShadeWire();
     } else if( recipe == "silhouette") {
 //        scene = new SceneSilhouette();
     } else if( recipe == "tess-teapot" ) {
