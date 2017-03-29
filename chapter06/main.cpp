@@ -22,6 +22,7 @@ using std::stringstream;
 #include "SceneSilhouette.h"
 #include "SceneBezCurve.h"
 #include "SceneQuadTess.h"
+#include "SceneTessTeapot.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -160,7 +161,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "silhouette") {
         scene = new SceneSilhouette();
     } else if( recipe == "tess-teapot" ) {
-//        scene = new SceneTessTeapot();
+        scene = new SceneTessTeapot();
     } else if( recipe == "tess-teapot-depth" ) {
 //        scene = new SceneTessTeapotDepth();
     } else {
