@@ -19,6 +19,7 @@ using std::stringstream;
 #include "scene.h"
 #include "glutils.h"
 #include "SceneNoise.h"
+#include "SceneSky.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -155,7 +156,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "paint") {
 //        scene = new ScenePaint();
     } else if( recipe == "sky" ) {
-//        scene = new SceneSky();
+        scene = new SceneSky();
     } else if( recipe == "wood" ) {
 //        scene = new SceneWood();
     } else {
