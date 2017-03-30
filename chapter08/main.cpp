@@ -21,6 +21,7 @@ using std::stringstream;
 #include "SceneNoise.h"
 #include "SceneSky.h"
 #include "SceneWood.h"
+#include "SceneDecay.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -149,7 +150,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     std::string recipe = argv[1];
 
     if( recipe == "decay" ) {
-//        scene = new SceneDecay();
+        scene = new SceneDecay();
     } else if( recipe == "noise" ) {
         scene = new SceneNoise();
     } else if( recipe == "night-vision") {
