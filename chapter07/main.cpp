@@ -21,6 +21,7 @@ using std::stringstream;
 #include "ScenePcf.h"
 #include "SceneJitter.h"
 #include "SceneShadowVolume.h"
+#include "SceneAo.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -149,7 +150,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     std::string recipe = argv[1];
 
     if( recipe == "ao" ) {
-//        scene = new SceneAo();
+        scene = new SceneAo();
     } else if( recipe == "jitter") {
         scene = new SceneJitter();
     } else if( recipe == "pcf") {
