@@ -20,6 +20,7 @@ using std::stringstream;
 #include "SceneShadowMap.h"
 #include "ScenePcf.h"
 #include "SceneJitter.h"
+#include "SceneShadowVolume.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -156,7 +157,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "shadow-map" ) {
         scene = new SceneShadowMap();
     } else if( recipe == "shadow-volume" ) {
-//        scene = new SceneShadowVolume();
+        scene = new SceneShadowVolume();
     } else {
         printf("Unknown recipe: %s\n", recipe.c_str());
         printHelpInfo(argv[0]);
