@@ -20,6 +20,7 @@ using std::stringstream;
 #include "glutils.h"
 #include "SceneNoise.h"
 #include "SceneSky.h"
+#include "SceneWood.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -158,7 +159,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "sky" ) {
         scene = new SceneSky();
     } else if( recipe == "wood" ) {
-//        scene = new SceneWood();
+        scene = new SceneWood();
     } else {
         printf("Unknown recipe: %s\n", recipe.c_str());
         printHelpInfo(argv[0]);
