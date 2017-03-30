@@ -17,6 +17,7 @@ using std::stringstream;
 //
 #include "scene.h"
 #include "glutils.h"
+#include "SceneShadowMap.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -151,7 +152,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "pcf") {
 //        scene = new ScenePcf();
     } else if( recipe == "shadow-map" ) {
-//        scene = new SceneShadowMap();
+        scene = new SceneShadowMap();
     } else if( recipe == "shadow-volume" ) {
 //        scene = new SceneShadowVolume();
     } else {
