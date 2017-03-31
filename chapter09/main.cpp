@@ -22,6 +22,7 @@ using std::stringstream;
 #include "SceneParticles.h"
 #include "SceneParticlesFeedback.h"
 #include "SceneParticlesInstanced.h"
+#include "SceneFire.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -150,7 +151,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     std::string recipe = argv[1];
 
     if( recipe == "fire" ) {
-//        scene = new SceneFire();
+        scene = new SceneFire();
     } else if( recipe == "particles") {
         scene = new SceneParticles();
     } else if( recipe == "particles-feedback") {
