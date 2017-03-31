@@ -23,6 +23,7 @@ using std::stringstream;
 #include "SceneParticlesFeedback.h"
 #include "SceneParticlesInstanced.h"
 #include "SceneFire.h"
+#include "SceneSmoke.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -159,7 +160,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "particles-instanced" ) {
         scene = new SceneParticlesInstanced();
     } else if( recipe == "smoke" ) {
-//        scene = new SceneSmoke();
+        scene = new SceneSmoke();
     } else if( recipe == "wave" ) {
         scene = new SceneWave();
     } else {
