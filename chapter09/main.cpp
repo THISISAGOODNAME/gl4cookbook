@@ -1,5 +1,5 @@
 //
-// Created by yangyanjun on 2017/3/30.
+// Created by yangyanjun on 2017/3/31.
 //
 
 
@@ -18,12 +18,7 @@ using std::stringstream;
 //
 #include "scene.h"
 #include "glutils.h"
-#include "SceneNoise.h"
-#include "SceneSky.h"
-#include "SceneWood.h"
-#include "SceneDecay.h"
-#include "ScenePaint.h"
-#include "SceneNightVision.h"
+
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -109,7 +104,7 @@ int main(int argc, char * argv[]) {
 //    glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GL_TRUE);
 
     // Open the window
-    title = "Chapter 08 -- " + recipe;
+    title = "Chapter 09 -- " + recipe;
     window = glfwCreateWindow(WIN_WIDTH, WIN_HEIGHT, title.c_str(), nullptr, nullptr);
     if (window == nullptr) {
         std::cout << "Failed to create GLFW window" << std::endl;
@@ -151,18 +146,18 @@ std::string parseCLArgs(int argc, char ** argv) {
 
     std::string recipe = argv[1];
 
-    if( recipe == "decay" ) {
-        scene = new SceneDecay();
-    } else if( recipe == "noise" ) {
-        scene = new SceneNoise();
-    } else if( recipe == "night-vision") {
-        scene = new SceneNightVision();
-    } else if( recipe == "paint") {
-        scene = new ScenePaint();
-    } else if( recipe == "sky" ) {
-        scene = new SceneSky();
-    } else if( recipe == "wood" ) {
-        scene = new SceneWood();
+    if( recipe == "fire" ) {
+//        scene = new SceneFire();
+    } else if( recipe == "particles") {
+//        scene = new SceneParticles();
+    } else if( recipe == "particles-feedback") {
+//        scene = new SceneParticlesFeedback();
+    } else if( recipe == "particles-instanced" ) {
+//        scene = new SceneParticlesInstanced();
+    } else if( recipe == "smoke" ) {
+//        scene = new SceneSmoke();
+    } else if( recipe == "wave" ) {
+//        scene = new SceneWave();
     } else {
         printf("Unknown recipe: %s\n", recipe.c_str());
         printHelpInfo(argv[0]);
@@ -175,12 +170,11 @@ std::string parseCLArgs(int argc, char ** argv) {
 void printHelpInfo(const char * exeFile) {
     printf("Usage: %s recipe-name\n\n", exeFile);
     printf("Recipe names: \n");
-    printf("  noise        : just display the raw noise texture\n");
-    printf("  decay        : decay of a teapot\n");
-    printf("  night-vision : night vision goggles\n");
-    printf("  paint        : paint spatters on a teapot\n");
-    printf("  sky          : clouds and sky\n");
-    printf("  wood         : wood \n");
-
+    printf("  fire                 : particles simulating fire\n");
+    printf("  particles            : a fountain of particles\n");
+    printf("  particles-feedback   : a fountain of particles implemented with transform feedback\n");
+    printf("  particles-instanced  : a fountain of instanced particles, mmmm.. donuts\n");
+    printf("  smoke                : particles simulating smoke\n");
+    printf("  wave                 : a plane wave displacement animation\n");
 }
 
