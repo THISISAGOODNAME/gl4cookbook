@@ -19,6 +19,7 @@ using std::stringstream;
 #include "scene.h"
 #include "glutils.h"
 #include "SceneWave.h"
+#include "SceneParticles.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -149,7 +150,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     if( recipe == "fire" ) {
 //        scene = new SceneFire();
     } else if( recipe == "particles") {
-//        scene = new SceneParticles();
+        scene = new SceneParticles();
     } else if( recipe == "particles-feedback") {
 //        scene = new SceneParticlesFeedback();
     } else if( recipe == "particles-instanced" ) {
