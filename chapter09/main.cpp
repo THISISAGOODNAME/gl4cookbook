@@ -18,7 +18,7 @@ using std::stringstream;
 //
 #include "scene.h"
 #include "glutils.h"
-
+#include "SceneWave.h"
 
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
@@ -157,7 +157,7 @@ std::string parseCLArgs(int argc, char ** argv) {
     } else if( recipe == "smoke" ) {
 //        scene = new SceneSmoke();
     } else if( recipe == "wave" ) {
-//        scene = new SceneWave();
+        scene = new SceneWave();
     } else {
         printf("Unknown recipe: %s\n", recipe.c_str());
         printHelpInfo(argv[0]);
