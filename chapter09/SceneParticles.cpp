@@ -162,10 +162,10 @@ void SceneParticles::resize(int w, int h)
 void SceneParticles::compileAndLinkShader()
 {
     try {
-//        prog.compileShader("shader/particles.vert",GLSLShader::VERTEX);
-//        prog.compileShader("shader/particles.frag",GLSLShader::FRAGMENT);
-        prog.compileShader("shader/particles.vs",GLSLShader::VERTEX);
-        prog.compileShader("shader/particles.fs",GLSLShader::FRAGMENT);
+        prog.compileShader("shader/particles.vert",GLSLShader::VERTEX);
+        prog.compileShader("shader/particles.frag",GLSLShader::FRAGMENT);
+//        prog.compileShader("shader/particles.vs",GLSLShader::VERTEX);
+//        prog.compileShader("shader/particles.fs",GLSLShader::FRAGMENT);
 
         prog.link();
         prog.use();
