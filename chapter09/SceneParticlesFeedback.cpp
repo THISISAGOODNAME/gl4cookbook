@@ -229,9 +229,12 @@ void SceneParticlesFeedback::render()
     view = glm::lookAt(vec3(3.0f * cos(angle),1.5f,3.0f * sin(angle)), vec3(0.0f,1.5f,0.0f), vec3(0.0f,1.0f,0.0f));
     setMatrices();
 
-    glBindTransformFeedback(GL_TRANSFORM_FEEDBACK, 0);
+//    glBindTransformFeedback(GL_TRANSFORM_FEEDBACK, 0);
+//    glBindVertexArray(particleArray[drawBuf]);
+//    glDrawArrays(GL_POINTS, 0, nParticles);
+
     glBindVertexArray(particleArray[drawBuf]);
-    glDrawArrays(GL_POINTS, 0, nParticles);
+    glDrawTransformFeedback(GL_POINTS, feedback[drawBuf]);
 
     // Swap buffers
     drawBuf = 1 - drawBuf;
